@@ -1,0 +1,134 @@
+# Featured Image Extended translation template.
+# Copyright (C) 2018
+# This file is distributed under the same license as the Featured Image Extended package.
+# Enrico Sorcinelli, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Featured Image Extended 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/plugins/featured-image-extended\n"
+"POT-Creation-Date: 2018-06-26 18:22+0200\n"
+"PO-Revision-Date: 2018-06-26 18:54+0200\n"
+"Language-Team: Enrico Sorcinelli <FName.LName>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Last-Translator: Enrico Sorcinelli\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: it_IT\n"
+
+#: php/adminpages/featured-image-extended.php:12
+msgid "Show in the post or listing"
+msgstr "Mostra nel post o negli archivi"
+
+#: php/adminpages/featured-image-extended.php:14
+msgid "Link"
+msgstr ""
+
+#: php/adminpages/featured-image-extended.php:17
+msgid "URL"
+msgstr ""
+
+#: php/adminpages/featured-image-extended.php:23
+msgid "Title"
+msgstr "Titolo"
+
+#: php/adminpages/featured-image-extended.php:31
+msgid "Open link in a new tab"
+msgstr "Apri il link in un'altra finestra"
+
+#: php/adminpages/general-settings.php:16
+#: php/class-featured-image-extended-admin.php:101
+msgid "Featured Image Extended settings"
+msgstr "Featured Image Extended impostazioni"
+
+#: php/adminpages/general-settings.php:27
+msgid "Featured image"
+msgstr "Immagine in evidenza"
+
+#: php/adminpages/general-settings.php:28
+msgid "Options"
+msgstr "Opzioni"
+
+#: php/adminpages/general-settings.php:34
+msgid "Post Types"
+msgstr "Post type"
+
+#: php/adminpages/general-settings.php:56
+msgid "Select post types where to apply featured extended images."
+msgstr "Seleziona i post type in cui applicare le immagini in evidenza estese."
+
+#: php/adminpages/general-settings.php:60
+msgid "Theme context"
+msgstr "Contesto del tema"
+
+#: php/adminpages/general-settings.php:62
+msgid "Apply to:"
+msgstr "Applica a:"
+
+#: php/adminpages/general-settings.php:65
+msgid "Homepage"
+msgstr ""
+
+#: php/adminpages/general-settings.php:68
+msgid "Single (posts, pages and CPT)"
+msgstr "Pagina singola (post, pagine e CPT)"
+
+#: php/adminpages/general-settings.php:71
+msgid "Archive (archive, category, search)"
+msgstr "Archivio (archivi, categorie, ricerche)"
+
+#: php/adminpages/general-settings.php:73
+msgid "Select contexts where to apply featured extended images."
+msgstr "Seleziona i contesti in cui applicare le immagini in evidenza estese."
+
+#: php/adminpages/general-settings.php:77
+msgid "Administration"
+msgstr "Pannello di amministrazione"
+
+#: php/adminpages/general-settings.php:81
+msgid "Show featured image on posts list."
+msgstr "Visualizza l'immagine in evidenza nelle pagine di listing."
+
+#: php/adminpages/general-settings.php:91
+msgid "Plugin settings"
+msgstr "Impostazioni del plugun"
+
+#: php/adminpages/general-settings.php:95
+msgid "Completely remove options on plugin removal."
+msgstr "Rimuovi completamente le opzioni nella rimozione del plugin."
+
+#: php/adminpages/credits.php:13
+msgid "Changelog"
+msgstr ""
+
+#: php/adminpages/credits.php:14
+msgid "What's new in"
+msgstr "Cosa c'&egrave; di nuovo nella"
+
+#: php/adminpages/credits.php:15
+#, php-format
+msgid "version %s"
+msgstr "versione %s"
+
+#: php/adminpages/credits.php:16
+msgid "Support"
+msgstr "Supporto"
+
+#: php/adminpages/credits.php:18
+msgid "Feel free to ask for help"
+msgstr "Sentiti libero di chiedere aiuto"
+
+#: php/adminpages/credits.php:20
+#: php/class-featured-image-extended-admin.php:101
+msgid "Featured Image Extended"
+msgstr ""
+
+#: php/adminpages/credits.php:20
+msgid "by"
+msgstr "di"
+
+#: php/class-featured-image-extended-admin.php:223
+msgid "Featured"
+msgstr "In evidenza"

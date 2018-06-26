@@ -1,0 +1,76 @@
+/* CSS admin */
+
+/* Feaatured image extended box options */
+#featured-image-extended-options label span {
+	display: inline-block;
+	width: 35px;
+}
+
+#featured-image-extended-options label input[type="text"] {
+	margin-top: 5px;
+}
+
+#featured-image-extended-options h4 {
+	margin: 0;
+}
+
+/* Tabs management - start */
+h2.nav-tab-wrapper.featured-image-extended {
+	padding: inherit !important;
+}
+
+section.featured-image-extended {
+	display: none;
+}
+
+section.featured-image-extended:first-of-type {
+	display: block;
+}
+
+h2.nav-tab-wrapper a.featured-image-extended {
+	cursor: pointer;
+}
+/* Tabs management - end */
+
+/* Objects lits */
+.column-featured_image_extended {
+	width: 10%;
+}
+
+.featured-image-extended-edit {
+	position: relative;
+	width: 60px;
+	height: 60px;
+}
+
+.featured-image-extended-edit a {
+	line-height: 0;
+	display: inline-table;
+}
+
+.featured-image-extended-edit span.dashicons-hidden {
+	display: inline-table;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	color: #eee;
+	font-size: 25px;
+	width: auto;
+	height: auto;
+}
+
+.featured-image-extended-edit div.not-shown {
+	opacity: 0.5;
+	background-color: #000;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 0;
+}
+
+@media screen and ( max-width: 782px ) {
+	.column-featured_image_extended {
+		display: none !important;
+	}
+}
