@@ -136,6 +136,26 @@ class Admin {
 		// Add thumbnail columns to the posts table header.
 		add_filter( 'manage_posts_columns', array( $this, 'addFeaturedImageColumnHeader' ), 15, 1 );
 		add_filter( 'manage_pages_columns', array( $this, 'addFeaturedImageColumnHeader' ), 15, 1 );
+
+		/** This filter is documented in php/class-featured-image-extended-admin.php */
+		if ( apply_filters( 'featured_image_extended_admin_settings', true ) ) {
+			add_filter( 'plugin_action_links_featured-image-extended/featured-image-extended.php', array( $this, 'pluginActions' ), 10, 4 );
+		}
+	}
+
+	/**
+	 * Add link to settng page in plugins list.
+	 *
+	 * @param array  $actions     Actions.
+	 * @param string $plugin_file Plugin filename.
+	 * @param array  $plugin_data Plugin data.
+	 * @param string $context     Context.
+	 *
+	 * @return array
+	 */
+	public function pluginActions( $actions, $plugin_file, $plugin_data, $context ) {
+		array_unshift( $actions, '<a href="' . menu_page_url( $this->prefix . 'general_settings', false ) . '">' . esc_html__( 'Settings', 'featured-image-extended' ) . '</a>' );
+		return $actions;
 	}
 
 	/**
