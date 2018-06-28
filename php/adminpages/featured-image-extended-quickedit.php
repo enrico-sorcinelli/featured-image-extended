@@ -6,7 +6,7 @@
  */
 
 ?>
-<fieldset class="inline-edit-col-left inline-edit-<?php echo esc_attr( $params['column_name'] ) ; ?>">
+<fieldset class="inline-edit-col-left inline-edit-<?php echo esc_attr( $params['column_name'] ); ?>">
 	<div class="inline-edit-col">
 		<legend class="inline-edit-legend"><?php esc_html_e( 'Featured image', 'featured-image-extended' ); ?></legend>
 		<label class="inline-edit-group">
