@@ -76,10 +76,14 @@ if ( ! empty( $registered_post_types ) ) {
 			<tr>
 				<th scope="row"><?php esc_html_e( 'Administration', 'featured-image-extended' ); ?></th>
 				<td>
-					<p>
+					<fieldset>
 						<input name="<?php echo esc_attr( $params['prefix'] . 'general_settings[admin][add_column]' ); ?>" type="checkbox" id="<?php echo esc_attr( $params['prefix'] . 'general_settings_admin_add_column' ); ?>" value="1" <?php checked( 1, empty( $params['settings']['admin']['add_column'] ) ? 0 : 1, true ); ?>>
 						<label for="<?php echo esc_attr( $params['prefix'] . 'general_settings_admin_add_column' ); ?>"><?php esc_html_e( 'Show featured image on posts list.', 'featured-image-extended' ); ?></label>
-					</p>
+						<br>
+						<input name="<?php echo esc_attr( $params['prefix'] . 'general_settings[admin][quickedit]' ); ?>" type="checkbox" id="<?php echo esc_attr( $params['prefix'] . 'general_settings_admin_quickedit' ); ?>" value="1" <?php checked( 1, empty( $params['settings']['admin']['quickedit'] ) ? 0 : 1, true ); ?>>
+						<input name="<?php echo esc_attr( $params['prefix'] . 'general_settings[admin][quickedit]' ); ?>" type="hidden" id="<?php echo esc_attr( $params['prefix'] . 'general_settings_admin_quickedit_h' ); ?>" value="<?php echo empty( $params['settings']['admin']['quickedit'] ) ? 0 : 1; ?>">
+						<label for="<?php echo esc_attr( $params['prefix'] . 'general_settings_admin_quickedit' ); ?>"><?php esc_html_e( 'Allows quick editing.', 'featured-image-extended' ); ?></label>
+					</fieldset>
 				</td>
 			<tr>
 		</table>
