@@ -169,19 +169,30 @@ class Featured_Image_Extended {
 	 * @return array
 	 */
 	private function getPluginOptions() {
+
 		$settings = wp_parse_args(
 			get_option( self::$prefix . 'general_settings', array() ),
 			array(
 				'show'    => array(
 					'post_types'      => array(),
+					'context_home'    => false,
 					'context_single'  => true,
 					'context_archive' => true,
+				),
+				'admin' => array(
+					'add_column' => false,
+					'quickedit'  => false,
 				),
 				'options' => array(
 					'remove_plugin_settings' => false,
 				),
 			)
 		);
+
+		// Check for empty values.
+		if ( ! isset( $settings['show']['post_types'] ) ) {
+			$settings['show']['post_types'] = array();
+		}
 
 		/**
 		 * Filter plugin settings.
