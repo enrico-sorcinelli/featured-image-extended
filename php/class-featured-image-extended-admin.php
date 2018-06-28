@@ -323,7 +323,8 @@ class Admin {
 		wp_enqueue_style(
 			$this->prefix . 'css',
 			FEATURED_IMAGE_EXTENDED_PLUGIN_BASEURL . '/assets/css/admin.css',
-			array()
+			array(),
+			FEATURED_IMAGE_EXTENDED_PLUGIN_VERSION
 		);
 	}
 
