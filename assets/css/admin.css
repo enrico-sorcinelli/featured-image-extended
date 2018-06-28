@@ -1,6 +1,11 @@
 /* CSS admin */
 
 /* Feaatured image extended box options */
+#featured-image-extended-options label {
+	display: block;
+	margin: 4px 0 0 0;
+}
+
 #featured-image-extended-options label span {
 	display: inline-block;
 	width: 35px;
@@ -8,6 +13,7 @@
 
 #featured-image-extended-options label input[type="text"] {
 	margin-top: 5px;
+	width: 100%;
 }
 
 #featured-image-extended-options h4 {
@@ -73,4 +79,21 @@ h2.nav-tab-wrapper a.featured-image-extended {
 	.column-featured_image_extended {
 		display: none !important;
 	}
+}
+
+/* Quickedit */
+#featured_image_extended_general_settings_admin_quickedit {
+	margin-left: 20px;
+}
+
+fieldset.inline-edit-featured_image_extended span {
+	font-style: italic;
+}
+
+fieldset.inline-edit-featured_image_extended span.input {
+	float: left;
+}
+
+fieldset.inline-edit-featured_image_extended h4{
+	font-style: normal;
 }
