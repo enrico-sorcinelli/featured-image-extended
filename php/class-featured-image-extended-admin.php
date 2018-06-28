@@ -188,6 +188,27 @@ class Admin {
 	}
 
 	/**
+	 * The quick_edit_custom_box callback. Renders the QuickEdit box.
+	 * Renders with blank values here since QuickEdit boxes cannot access to the WP post_id.
+	 * The values will be populated with JavaScript.
+	 *
+	 * @param string $column_name The column name.
+	 * @param string $post_type   The post type to show the column.
+	 * @param array  $values      The current values.
+	 */
+	public function addQuickeditBox( $column_name, $post_type, $values = array() ) {
+		if ( 'featured_image_extended' !== $column_name ) {
+			return;
+		}
+		\Plugin_Utils::includeTemplate( FEATURED_IMAGE_EXTENDED_PLUGIN_BASEDIR . '/php/adminpages/featured-image-extended-quickedit.php',
+			array(
+				'prefix'      => $this->prefix,
+				'column_name' => $column_name,
+			)
+		);
+	}
+
+	/**
 	 * `save_post` action hook when a post is saved.
 	 *
 	 * @param int     $post_id The post ID.
@@ -197,8 +218,11 @@ class Admin {
 	 */
 	public function savePost( $post_id, $post, $update ) {
 
-		// Skip quick edit.
-		if ( isset( $_POST['action'] ) && 'inline-save' === $_POST['action'] ) { // WPCS: input var okay. CSRF okay.
+		// Skip quickedit.
+		if (
+			isset( $_POST['action'] ) && 'inline-save' === $_POST['action'] // WPCS: input var okay. CSRF okay.
+			&& ( empty( $this->plugin_options['admin']['add_column'] ) || empty( $this->plugin_options['admin']['quickedit'] ) )
+		) {
 			return;
 		}
 
@@ -243,6 +267,14 @@ class Admin {
 			// Return content for a this column.
 			add_action( 'manage_posts_custom_column', array( $this, 'addFeaturedImageColumnContent' ), 15, 2 );
 			add_action( 'manage_pages_custom_column', array( $this, 'addFeaturedImageColumnContent' ), 15, 2 );
+
+			// Add quickedit.
+			if (
+				! empty( $this->plugin_options['admin']['quickedit'] )
+				&& in_array( $current_post_type, $this->plugin_options['show']['post_types'], true )
+			) {
+				add_action( 'quick_edit_custom_box', array( $this, 'addQuickeditBox' ), 10, 2 );
+			}
 		}
 
 		return $columns;
@@ -262,6 +294,8 @@ class Admin {
 				\Plugin_Utils::includeTemplate( FEATURED_IMAGE_EXTENDED_PLUGIN_BASEDIR . '/php/adminpages/featured-image-extended-admin-cell.php', array(
 					'prefix'            => $this->prefix,
 					'featured_settings' => \Featured_Image_Extended::getFeaturedImageExtendedSettings( $post_id ),
+					'quickedit'         => $this->plugin_options['admin']['quickedit'],
+					'post_id'           => $post_id,
 				) );
 				break;
 		}
