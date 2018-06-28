@@ -4,7 +4,7 @@ Tags: post, category, featured image, thumbnail, theme, admin
 Requires at least: 4.4
 Requires PHP: 5.2.4
 Tested up to: 4.9.6
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 
 Feature Image Extended extends featured image builtin functionality.
@@ -16,6 +16,7 @@ Feature Image Extended extend featured image functionality allowing:
 * Display or not featured image in your themes for all post types.
 * Add link to the featured image.
 * Add thumbnail featured image in administration screens listing.
+* Allows featured image quick-editing.
 
 == Installation ==
 
@@ -31,13 +32,37 @@ Once the plugin is installed you can control settings in the following ways:
 * Programmatically by using `featured_image_extended_settings` filter below.
 * Using the *Settings->Featured Image Extended* administration screen.
 
-== Hooks ==
+
+If your theme uses a different call other than `the_post_thumbnail()`/`get_the_post_thumbnail()` in order to get the featured image, this plugin might not work.
+So, in order to get extended featured image settings and apply to you pages, you should use `featured_image_extended()` (see below).
+
+== API ==
+
+**`featured_image_extended( integer $post_id = null )`**
+
+It returns an array containing featured image extended information of `$post_id` post (or current post if you don't supply an argument) like following:
+
+`
+array(
+	'show'   => true,
+	'url'    => 'https://myurl.com',
+	'target' => '_blank',
+	'title'  => 'Image title',
+)
+`
+= Hooks =
 
 **`featured_image_extended_settings`**
 
 Filter plugin settings values.
 
 `apply_filters( 'featured_image_extended_settings', array $settings )`
+
+**`featured_image_extended_admin_settings`**
+
+Filter allowing to display or not the plugin settings page in the administration.
+
+`apply_filters( 'featured_image_extended_admin_settings', boolean $display )`
 
 == Frequently Asked Questions ==
 
