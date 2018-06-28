@@ -11,7 +11,7 @@
  * Author URI:  https://github.com/enrico-sorcinelli/featured-image-extended/graphs/contributors
  * Text Domain: featured-image-extended
  * Domain Path: /languages/
- * Version:     1.0.1
+ * Version:     1.0.2
  * License:     GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! class_exists( 'Featured_Image_Extended' ) ) {
 
 	// Plugins constants.
-	define( 'FEATURED_IMAGE_EXTENDED_PLUGIN_VERSION', '1.0.1' );
+	define( 'FEATURED_IMAGE_EXTENDED_PLUGIN_VERSION', '1.0.2' );
 	define( 'FEATURED_IMAGE_EXTENDED_PLUGIN_BASEDIR', dirname( __FILE__ ) );
 	define( 'FEATURED_IMAGE_EXTENDED_PLUGIN_BASEURL', plugin_dir_url( __FILE__ ) );
 
