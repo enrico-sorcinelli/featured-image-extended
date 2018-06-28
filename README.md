@@ -2,16 +2,16 @@
 
 Feature Image Extended extends featured image functionality allowing:
 
-* Display or not featured image in your themes for all post types and for all theme templates.
-* Add link to the featured image.
-* Add thumbnail featured image in administration screens listing.
-* Allows featured image quick-editing.
+* Hiding featured image in your themes for all post types.
+* Adding link to the featured image.
+* Adding thumbnail featured image in administration screens listing.
+* Featured image quick-editing.
 
 # Installation
 
 This section describes how to install the plugin and get it working.
 
-1. Upload the plugin files to the `/wp-content/plugins/featured-image-extended` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/featured-image-extended` directory, or install the plugin through the WordPress _Plugins_ screen directly.
 1. Activate the plugin through the _Plugins_ screen in WordPress.
 
 # Usage
@@ -19,7 +19,7 @@ This section describes how to install the plugin and get it working.
 Once the plugin is installed you can configure it in the following ways:
 
 * Using the _Settings->Featured Image Extended_ administration screen.
-* Programmatically, by using `featured_image_extended_settings` filter below.
+* Programmatically, by using `featured_image_extended_settings` filter (see below).
 
 If your theme uses a different call other than `the_post_thumbnail()`/`get_the_post_thumbnail()` in order to get the featured image, this plugin might not work.
 So, in order to get extended featured image settings and apply to your pages, you should use `featured_image_extended()` (see below).
@@ -49,7 +49,7 @@ Filters plugin settings values.
 apply_filters( 'featured_image_extended_settings', array $settings )
 ```
 
-## `featured_image_extended_admin_settings`
+### `featured_image_extended_admin_settings`
 
 Filter allowing to display or not the plugin settings page in the administration.
 
