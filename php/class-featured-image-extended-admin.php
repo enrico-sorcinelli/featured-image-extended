@@ -346,34 +346,9 @@ class Admin {
 
 		// Localization.
 		wp_localize_script( $this->prefix . 'js', $this->prefix . 'i18n', array(
-			'_nonces'     => $this->createNonces(),
+			'_nonces'     => array(),
 			'_plugin_url' => FEATURED_IMAGE_EXTENDED_PLUGIN_BASEURL,
 			'msgs'        => array(),
-		) );
-	}
-
-	/**
-	 * Create all needed nonces.
-	 *
-	 * @param integer $post_id Current post ID (needed for custom lock dialog).
-	 *
-	 * @return array
-	 */
-	private function createNonces( $post_id = '' ) {
-		return array(
-			// For lock dialog customization.
-			'remove_post_lock' => wp_create_nonce( 'update-post_' . $post_id ),
-		);
-	}
-
-	/**
-	 * Home admin page callback.
-	 *
-	 * @return void
-	 */
-	public function pageHome() {
-		\Plugin_Utils::includeTemplate( FEATURED_IMAGE_EXTENDED_PLUGIN_BASEDIR . '/php/adminpages/home.php', array(
-			'prefix' => $this->prefix,
 		) );
 	}
 
