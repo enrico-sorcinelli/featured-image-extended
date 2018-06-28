@@ -22,7 +22,7 @@ Once the plugin is installed you can configure it in the following ways:
 * Programmatically, by using `featured_image_extended_settings` filter below.
 
 If your theme uses a different call other than `the_post_thumbnail()`/`get_the_post_thumbnail()` in order to get the featured image, this plugin might not work.
-So, in order to get extended featured image settings and apply to you pages, you should use `featured_image_extended()` (see below).
+So, in order to get extended featured image settings and apply to your pages, you should use `featured_image_extended()` (see below).
 
 # API
 
