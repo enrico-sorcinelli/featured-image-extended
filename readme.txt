@@ -71,7 +71,7 @@ Not completely. For setting visibility of featured image, this plugin uses `admi
 
 == Screenshots ==
 
-1. The Featured image metabox drag&drop in action.
+1. The Featured image metabox in action.
 2. The administration post list with featured image.
 3. The plugin settings page.
 
