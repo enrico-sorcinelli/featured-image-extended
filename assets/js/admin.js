@@ -43,16 +43,16 @@
 				$wp_inline_edit.apply( this, arguments );
 
 				// Get the post ID.
-				var $post_id = 0;
+				var post_id = 0;
 				if ( 'object' === typeof( id ) ) {
-					$post_id = parseInt( this.getId( id ) );
+					post_id = parseInt( this.getId( id ) );
 				}
 
-				if ( $post_id > 0 ) {
+				if ( post_id > 0 ) {
 
 					// Define the edit row.
-					var $edit_row = $( '#edit-' + $post_id );
-					var $post_row = $( '#post-' + $post_id );
+					var $edit_row = $( '#edit-' + post_id );
+					var $post_row = $( '#post-' + post_id );
 
 					// Get the data.
 					var featured_image_extended = $( '.column-featured_image_extended .wp-post-image', $post_row ).data('featured');
